@@ -1,0 +1,204 @@
+@php
+    $admin     = config('app.roles_id.admin');
+    $sales     = config('app.roles_id.sales');
+    $driver    = config('app.roles_id.driver');
+    $delivery  = config('app.roles_id.delivery');
+    $purchase  = config('app.roles_id.purchase');
+    $inventory = config('app.roles_id.inventory');
+
+    
+@endphp
+<div class="sidebar" id="sidebar">
+    <div class="sidebar-inner slimscroll">
+        <form action="https://crms-html.dreamguystech.com/light/search.html" class="mobile-view">
+            <input class="form-control" type="text" placeholder="Search here">
+            <button class="btn" type="button"><i class="fal fa-search"></i></button>
+        </form>
+        <div id="sidebar-menu" class="sidebar-menu">
+            <ul>
+                <li class="nav-item nav-profile">
+                    <a href="#" class="nav-link">
+                        <div class="nav-profile-image">
+                            <img src="{{ asset('/') }}images/default.png" alt="profile">
+                        </div>
+                        <div class="nav-profile-text d-flex flex-column">
+                            <span class="font-weight-bold mb-2">{{ $arr_login_user['first_name'] ?? '' }} {{ $arr_login_user['last_name'] ?? '' }}</span>
+                            {{-- <span class="text-white text-small">Project Manager</span> --}}
+                        </div>
+                        <i class="mdi mdi-bookmark-check text-success nav-profile-badge"></i>
+                    </a>
+                </li>
+                <li class="menu-title">
+                    <span>Main</span>
+                </li>
+                <li>
+                    <a href="{{ url('/') }}" class="{{ Route::getCurrentRoute()->uri() == '/' ? 'active' : '' }}" ><i class="fal fa-tachometer" aria-hidden="true"></i> <span> Dashboard</span></a>
+                </li>
+                <li>
+                    <a href="{{ Route('roles') }}" class="{{ Request::segment('1') == 'roles' ? 'active' : '' }}" ><i class="fa fa-tasks" aria-hidden="true"></i> <span> Roles</span></a>
+                </li>
+
+                @if(checkPermission([$admin]))
+                    <li>
+                        <a href="{{ Route('employee') }}" class="{{ Request::segment('1') == 'employee' ? 'active' : '' }}" ><i class="fa fa-users" aria-hidden="true"></i> <span> Employee</span></a>
+                    </li>
+                    <li>
+                        <a href="{{ Route('customer') }}" class="{{ Request::segment('1') == 'customer' ? 'active' : '' }}" ><i class="fa fa-address-card" aria-hidden="true"></i> <span> Customers</span></a>
+                    </li>
+                    <li>
+                        <a href="{{ Route('site_setting') }}" class="{{ Request::segment('1') == 'site_setting' ? 'active' : '' }}" ><i class="fal fa-cog" aria-hidden="true"></i> <span>Site Setting</span></a>
+                    </li>
+                    <li class="submenu">
+                        <a href="#"><i class="fal fa-cogs" aria-hidden="true"></i> <span> Setup </span> <span class="menu-arrow"><i class="far fa-chevron-right"></i></span></a>
+                        <ul class="sub-menus">
+                            <li><a href="{{ Route('taxes') }}" class="{{ Request::segment('1') == 'taxes' ? 'active' : '' }}">Taxes</a></li>
+                            <li><a href="{{ Route('units') }}" class="{{ Request::segment('1') == 'units' ? 'active' : '' }}">Units</a></li>
+                            <li><a href="{{ Route('payment_methods') }}" class="{{ Request::segment('1') == 'payment_methods' ? 'active' : '' }}">Payment Methods</a></li>
+                            <li><a href="{{ Route('pumps') }}" class="{{ Request::segment('1') == 'pumps' ? 'active' : '' }}">Pumps</a></li>
+                        </ul>
+                    </li>
+                @endif
+
+                @if(checkPermission([$admin,$sales]))
+                    <li> 
+                        <a href="{{ Route('product') }}" class="{{ Request::segment('1') == 'product' ? 'active' : '' }}"><i class="fal fa-podcast" aria-hidden="true"></i> <span>Product</span></a>
+                    </li>
+                    @if(isset($arr_site_setting['sales_with_workflow'])&&$arr_site_setting['sales_with_workflow'] != '0' )
+                        <li>
+                            <a href="{{ Route('leads') }}" class="{{ Request::segment('1') == 'leads' ? 'active' : '' }}" ><i class="fal fa-user " aria-hidden="true"></i> <span>Leads</span></a>
+                        </li>
+                    @endif
+                    <li class="submenu">
+                        <a href="#"><i class="fa fa-university menu-icon" aria-hidden="true"></i> <span> Sales </span> <span class="menu-arrow"><i class="far fa-chevron-right"></i></span></a>
+                        <ul class="sub-menus">
+                            @if(isset($arr_site_setting['sales_with_workflow'])&&$arr_site_setting['sales_with_workflow'] != '0' )
+                                <li><a href="{{ Route('inquiries') }}" class="{{ Request::segment('1') == 'inquiries' ? 'active' : '' }}">Inquiries</a></li>
+                                <li><a href="{{ Route('estimates') }}" class="{{ Request::segment('1') == 'estimates' ? 'active' : '' }}">Estimates</a></li>
+                                <li><a href="{{ Route('proposals') }}" class="{{ Request::segment('1') == 'proposals' ? 'active' : '' }}">Proposals</a></li>
+                                <li><a href="{{ Route('booking') }}" class="{{ Request::segment('1') == 'booking' ? 'active' : '' }}">Bookings</a></li>
+                                <li><a href="{{ Route('invoices') }}" class="{{ Request::segment('1') == 'invoices' ? 'active' : '' }}">Invoices</a></li>
+                                <li><a href="{{ Route('payments') }}" class="{{ Request::segment('1') == 'payments' ? 'active' : '' }}">Payments</a></li>
+                                <li><a href="{{ Route('cust_contract') }}" class="{{ Request::segment('1') == 'cust_contract' ? 'active' : '' }}">Account</a></li>
+                            @else
+                                <li><a href="{{ Route('proposals') }}" class="{{ Request::segment('1') == 'proposals' ? 'active' : '' }}">Proposals</a></li>
+                            @endif
+                            <li><a href="{{ Route('account_statement') }}" class="{{ Request::segment('1') == 'account_statement' ? 'active' : '' }}">Account Statement</a></li>
+                        </ul>
+                    </li>
+                @endif
+
+                @if(checkPermission([$admin,$delivery]))
+                    <li class="submenu">
+                        <a href="#"><i class="fal fa-check-square" aria-hidden="true"></i> <span> Reservations </span> <span class="menu-arrow"><i class="far fa-chevron-right"></i></span></a>
+                        <ul class="sub-menus">
+                            <li><a href="{{ Route('booking') }}" class="{{ Request::segment('1') == 'booking' ? 'active' : '' }}">Bookings</a></li>
+                        </ul>
+                    </li>
+                @endif
+
+                @if(checkPermission([$admin,$delivery]))
+                    <li class="submenu">
+                        <a href="#"><i class="fa fa-truck menu-icon" aria-hidden="true"></i> <span> Dispatch </span> <span class="menu-arrow"><i class="far fa-chevron-right"></i></span></a>
+                        <ul class="sub-menus">
+                            <li><a href="{{ Route('delivery_orders') }}" class="{{ Request::segment('1') == 'delivery_orders' ? 'active' : '' }}">Orders</a></li>
+                            <li><a href="{{ Route('driver') }}" class="{{ Request::segment('1') == 'driver' ? 'active' : '' }}">Driver</a></li>
+                            <li><a href="{{ Route('vehicle') }}" class="{{ Request::segment('1') == 'vehicle' ? 'active' : '' }}">Vehicle</a></li>
+                        </ul>
+                    </li>
+                @endif
+
+                @if(checkPermission([$admin]))
+                    <li class="submenu">
+                        <a href="javascript:void(0);" ><i class="fa fa-file"></i> <span> Account Statement </span> <span class="menu-arrow"><i class="far fa-chevron-right"></i></span></a>
+                        <ul class="sub-menus">
+                            <li><a href="{{ Route('booking_statement') }}" >Booking Statement</a></li>
+                            {{-- <li><a href="{{ Route('account_statement') }}" >Account Statement</a></li> --}}
+                        </ul>
+                    </li>
+                @endif
+
+                @if(checkPermission([$admin,$purchase]))
+                    <li class="submenu">
+                        <a href="#"><i class="fal fa-shopping-cart" aria-hidden="true"></i> <span> Purchase </span> <span class="menu-arrow"><i class="far fa-chevron-right"></i></span></a>
+                        <ul class="sub-menus">
+                            @if(isset($arr_site_setting['purchase_with_workflow'])&&$arr_site_setting['purchase_with_workflow'] != '0' )
+                                <li><a href="{{ Route('commodity_groups') }}" class="{{ Request::segment('1') == 'commodity_groups' ? 'active' : '' }}">Commodity Group</a></li>
+                                <li><a href="{{ Route('items') }}" class="{{ Request::segment('1') == 'items' ? 'active' : '' }}">Items</a></li>
+                                <li><a href="{{ Route('vendors') }}" class="{{ Request::segment('1') == 'vendors' ? 'active' : '' }}">Vendor</a></li>
+                                <li><a href="{{ Route('purchase_request') }}" class="{{ Request::segment('1') == 'purchase_request' ? 'active' : '' }}">Purchase Request</a></li>
+                                <li><a href="{{ Route('estimate') }}" class="{{ Request::segment('1') == 'estimate' ? 'active' : '' }}">Estimate</a></li>
+                                <li><a href="{{ Route('purchase_order') }}" class="{{ Request::segment('1') == 'purchase_order' ? 'active' : '' }}">Purchase Orders</a></li>
+                                {{-- <li><a href="{{ Route('contract') }}" class="{{ Request::segment('1') == 'contract' ? 'active' : '' }}">Contracts</a></li> --}}
+                            @else
+                                <li><a href="{{ Route('purchase_order') }}" class="{{ Request::segment('1') == 'purchase_order' ? 'active' : '' }}">Purchase Orders</a></li>
+                            @endif
+                        </ul>
+                    </li>
+                @endif
+
+                @if(checkPermission([$admin,$inventory]))
+                    <li class="submenu">
+                        <a href="#"><i class="fal fa-snowflake" aria-hidden="true"></i> <span> Inventory </span> <span class="menu-arrow"><i class="far fa-chevron-right"></i></span></a>
+                        <ul class="sub-menus">
+                            <li><a href="{{ Route('item_index') }}">Items</a></li>
+                            <li><a href="{{ Route('stock_import_list') }}">Stock Import</a></li>
+                            <li><a href="{{ Route('stock_export') }}">Stock Export</a></li>
+                            <li><a href="{{ Route('loss_adjustment') }}">Loss & Adjustment</a></li>
+                            <li><a href="{{ Route('warehouse_history') }}">Warehouse History</a></li>
+                            <li><a href="{{ Route('vendor_setting') }}">setting</a></li>
+                        </ul>
+                    </li>
+                @endif
+
+                @if(checkPermission([$admin]))
+                    <li class="submenu">
+                        <a href="javascript:void(0);" ><i class="fa fa-calendar-check"></i> <span> Attendance </span> <span class="menu-arrow"><i class="far fa-chevron-right"></i></span></a>
+                        <ul class="sub-menus">
+                            <li>
+                                <a href="javascript:void(0);" >{{-- <i class="fa fa-clock" aria-hidden="true"></i> --}} <span> Shift Schedule </span> <span class="menu-arrow"><i class="far fa-chevron-right"></i></span></a>
+                                <ul class="sub-menus">
+                                    <li><a href="{{ Route('shifts') }}" >Shift(s)</a></li>
+                                    <li><a href="{{ Route('shift_calender') }}" >Shift Calender</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="{{ Route('break') }}" >Break</a></li>
+                            <li><a href="{{ Route('attend_calender_view') }}" >Calender View</a></li>
+                        </ul>
+                    </li>
+                @endif
+
+                @if(checkPermission([$admin]))
+                    <li class="submenu">
+                        <a href="javascript:void(0);" ><i class="fa fa-calendar-minus"></i> <span> Leave Tracker </span> <span class="menu-arrow"><i class="far fa-chevron-right"></i></span></a>
+                        <ul class="sub-menus">
+                            <li><a href="{{ Route('leaves') }}" >Leave Type</a></li>
+                            <li><a href="{{ Route('leave_application') }}" >Applications</a></li>
+                            <li><a href="{{ Route('leave_balance') }}" >Balance</a></li>
+                        </ul>
+                    </li>
+                @endif
+
+                <li class="submenu">
+                    <a href="javascript:void(0);" ><i class="fa fa-car-mechanic"></i> <span> Vechicle Maintance </span> <span class="menu-arrow"><i class="far fa-chevron-right"></i></span></a>
+                    <ul class="sub-menus">
+                        <li><a href="{{ Route('vc_part') }}" class="{{ Request::segment('1') == 'vc_part' ? 'active' : '' }}">Parts</a></li>
+                        <li><a href="{{ Route('vc_part_suppy') }}" class="{{ Request::segment('1') == 'vc_part_suppy' ? 'active' : '' }}">Supplier</a></li>
+                        <li><a href="{{ Route('manufacturer') }}" class="{{ Request::segment('1') == 'manufacturer' ? 'active' : '' }}">Manufacturer</a></li>
+                        <li><a href="{{ Route('vechicle_mym') }}" class="{{ Request::segment('1') == 'vechicle_mym' ? 'active' : '' }}">Make/Model/Year</a></li>
+                        <li>
+                            <a href="javascript:void(0);">Parts Stock</a>
+                            <ul class="sub-menus">
+                                <li><a href="{{ Route('vhc_purchase_parts') }}" class="{{ Request::segment('1') == 'vhc_purchase_parts' ? 'active' : '' }}">Purchase Parts</a></li>
+                                <li><a href="{{ Route('vhc_parts_stocks') }}" class="{{ Request::segment('1') == 'vhc_parts_stocks' ? 'active' : '' }}">Parts Stock</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="{{ Route('vhc_repair') }}" class="{{ Request::segment('1') == 'vhc_repair' ? 'active' : '' }}">Repair</a></li>
+                         <li><a href="{{ Route('print_labels') }}" class="{{ Request::segment('1') == 'print_labels' ? 'active' : '' }}">Print Labels</a></li>
+                    </ul>
+
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</div>

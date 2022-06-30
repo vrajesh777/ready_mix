@@ -1,0 +1,109 @@
+    .week-calendar .table {
+	  font-family: sans-serif;
+	  width: 100%;
+	  border-spacing: 0;
+	  border-collapse: separate;
+	}
+	.week-calendar .table thead tr th {
+	   /*background: #626e7e;*/
+	 color: #fff;
+	  padding: 0.5em;
+	  overflow: hidden;
+	  text-align: center;
+	}
+	.week-calendar .table thead{background: linear-gradient(to right, #da8cff, #9a55ff);}
+	.week-calendar .table thead tr th:first-child {
+	  border-radius: 3px 0 0 0;
+	}
+	.week-calendar .table thead tr th:last-child {
+	  border-radius: 0 3px 0 0;
+	}
+	.week-calendar .table thead tr th .day {
+	  display: block;
+	  font-size: 1.2em;
+	  border-radius: 50%;
+	  width: 35px;
+	  height: 30px;
+	  margin: 0 auto 0px;
+	  padding: 5px;
+	  line-height:1.4;
+	}
+	.week-calendar .table thead tr th .day.active {
+	  background: #d1d5db;
+	  color: #626e7e;
+	}
+	.week-calendar .table thead tr th .short {
+	  display: none;
+	}
+
+	.week-calendar .table tbody tr {
+	  background:#ece7f1;
+	}
+	.week-calendar .table tbody tr:nth-child(odd) {
+	  background:#fff;
+	}
+	.week-calendar .table tbody tr td {
+	  text-align: center;
+	  vertical-align: middle;
+	  border-left:1px solid #c8c2ce;
+	  position: relative;
+	 padding: .5rem
+	}
+	td.general-info p {
+	    margin: 2px 0;
+	    font-size: .7rem;
+	}
+	.week-calendar .table tbody tr:last-child td{border-bottom:1px solid #c8c2ce;}
+	.week-calendar .table tbody tr td:last-child {
+	  border-right:1px solid #c8c2ce;
+	}
+	.week-calendar .table tbody tr td.hour {
+	  font-size: 2em;
+	  color:#9a55ff;
+	  border-collapse: separate;
+	  min-width: 100px;
+	  cursor: default;
+	  
+	}
+	
+	.week-calendar .table tbody tr td.hour span {
+	  display:flex;align-items: center;font-size:.9rem;
+	}
+	.week-calendar .table tbody tr td.hour span p {
+	    margin:0 5px 0 0;color: #000;
+	}
+	.day-change .btn-group.page-link {
+	    padding: .3rem .75rem;
+	}
+	@media (max-width: 60em) {
+	  .week-calendar .table thead tr th .long {
+	    display: none;
+	  }
+	  .week-calendar .table thead tr th .short {
+	    display: block;
+	  }
+	  /*.week-calendar .table tbody tr td.hour span {
+	    transform: rotate(270deg);
+	    -webkit-transform: rotate(270deg);
+	    -moz-transform: rotate(270deg);
+	  }*/
+	}
+	@media (max-width: 27em) {
+	/*  .week-calendar .table thead tr th {
+	    font-size: 65%;
+	  }*/
+	  .week-calendar .table tbody tr td{padding:.2rem;}
+	  .week-calendar .table thead tr th .day {height:22px;width:72px;}
+	  .week-calendar .table thead tr th .day.active {
+	    background: #d1d5db;
+	    color: #626e7e;
+	  }
+	  .week-calendar .table tbody tr td.hour {
+	    font-size: 1.7em;min-width: auto;
+	  }
+	  /*.week-calendar .table tbody tr td.hour span {
+	    transform: translateY(16px) rotate(270deg);
+	    -webkit-transform: translateY(16px) rotate(270deg);
+	    -moz-transform: translateY(16px) rotate(270deg);
+	  }*/
+	}

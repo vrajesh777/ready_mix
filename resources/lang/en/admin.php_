@@ -1,0 +1,721 @@
+<?php
+
+return [
+
+    /*
+    |--------------------------------------------------------------------------
+        | Sidebar
+    |--------------------------------------------------------------------------
+    */
+    'english' => 'English',
+    'arebic'  => 'Arebic',
+    'check_in' => 'Check-In',
+    'check_out' => 'Check-Out',
+    'dashboard' => 'Dashboard',
+    'site_setting' => 'Site Setting',
+    'employee'=>'Employee',
+    'customers'=>'Customers',
+    'taxes' => 'Taxes',
+    'units'=>'Units',
+    'pumps'=>'Pumps',
+    'payment_methods'=>'Payment Methods',
+    'leads'=>'Leads',
+    'inquirie'=>'Inquirie',
+    'estimates'=>'Estimates',
+    'proposals'=>'Proposals',
+    'product'=>'Product',
+    'bookings'=>'Bookings',
+    'invoices'=>'Invoices',
+    'payments'=>'Payments',
+    'account'=>'Account',
+    'proposal'=>'Proposal',
+    'account_statement'=>'Account Statement',
+    'reservations'=>'Rservations',
+    'booking'=>'Booking',
+    'dispatch'=>'Dispatch',
+    'orders'=>'Orders',
+    'driver'=>'Driver',
+    'vehicle'=>'Vehicle',
+    'booking_statement'=>'Booking Statement',
+    'commodity_group'=>'Commodity Group',
+    'items'=>'Items',
+    'vendor'=>'Vendor',
+    'purchase_request'=>'Purchase Request',
+    'estimate'=>'Estimate',
+    'purchase_orders'=>'Purchase Orders',
+    'contracts'=>'Contracts',
+    'stock_import'=>'Stock Import',
+    'stock_export'=>'Stock Export',
+    'loss_&_adjustment'=>'Loss & Adjustment',
+    'warehouse_history'=>'Warehouse History',
+    'setting'=>'Setting',
+    'attendance'=>'Attendance',
+    'shifts'=>'shift(s)',
+    'shift'=>'Shift',
+    'shift_calender'=>'Shift Calender',
+    'break'=>'Break',
+    'calender_view'=>'Calender View',
+    'leave_tracker'=>'Leave Tracker',
+    'leave_type'=>'Leave Type',
+    'applications'=>'Applications',
+    'balance'=>'Balance',
+    'vechicle_maintance'=>'Vechicle Maintance',
+    'parts'=>'Parts',
+    'supplier'=>'Supplier',
+    'manufacturer'=>'Manufacturer',
+    'make_model_year'=>'Make/Model/Year',
+    'parts_stock'=>'Parts Stock',
+    'repair'=>'Repair',
+    'print_labels'=>'Print Labels',
+    'setup'=>'Setup',
+
+    /*
+    |--------------------------------------------------------------------------
+        | Common
+    |--------------------------------------------------------------------------
+    */
+
+    'manage'=>'Manage ',
+    'start'=>'Start',
+    'new'=>'New',
+    'create'=>'Create',
+    'quick'=>'Quick',
+    'quick_add'=>'add',
+    'status'=>'Status',
+    'actions'=>'Actions',
+    'active'=>'Active',
+    'deactive'=>'Deactive',
+    'quick_edit'=>'Quick Edit',
+    'edit'=>'Edit',
+    'add'=>'Add',
+    'select'=>'Select',
+    'save'=>'Save',
+    'cancel'=>'Cancel',
+    'customer'=>'Customer',
+    'view'=>'View',
+    'mark_as_draft'=>'Mark as Draft',
+    'mark_as_sent'=>'Mark as Sent',
+    'mark_as_open'=>'Mark as Open',
+    'mark_as_revised'=>'Mark as Revised',
+    'mark_as_declined'=>'Mark as Declined',
+    'mark_as_accepted'=>'Mark as Accepted',
+    'project'=>'Project',
+    'ref'=>'Ref',
+    /*
+    |--------------------------------------------------------------------------
+        | Employee
+    |--------------------------------------------------------------------------
+    */
+
+    'id'=>'ID',
+    'basic_info'=>'Basic Info',
+    'name'=>'Name',
+    'first_name'=>'First Name',
+    'last_name'=>'Last Name',
+    'email'=>'Email',
+    'mobile_no'=>'Mobile No',
+    'role'=>'Role',
+    'password'=>'Password',
+    'confirm'=>'Confirm',
+    'assign'=>'Assign',
+    'work'=>'Work',
+    'department'=>'Department',
+    'reporting_to'=>'Reporting To',
+    'source_of_hire'=>'Source of hire',
+    'title_designation'=>'Title / Designation',
+    'date_of_joining'=>'Date of Joining',
+    'probation_period'=>'Probation Period',
+    'employee_status'=>'Employee Status',
+    'employee_type'=>'Employee Type',
+    'personal'=>'Personal',
+    'address'=>'Address',
+    'city'=>'City',
+    'state'=>'State',
+    'zip_code'=>'Zip Code',
+    'birth_date'=>'Birth Date',
+    'marital_status'=>'Marital Status',
+    'gender'=>'Gender',
+    'male'=>'Male',
+    'female'=>'Female',
+    'other'=>'Other',
+    'experience'=>'Experience',
+    'previous_company_name'=>'Previous Company Name',
+    'job_title'=>'Job Title',
+    'from_date'=>'From Date',
+    'to_date'=>'To Date',
+    'job_description'=>'Job Description',
+    'education'=>'Education',
+    'school_name'=>'School Name',
+    'degree_diploma'=>'Degree/Diploma',
+    'field_of_study'=>'Field of Study',
+    'date_of_completion'=>'Date of Completion',
+    'additional_notes'=>'Additional Notes',
+    'sr_no'=>'Sr No',
+
+    /*
+    |--------------------------------------------------------------------------
+        | Customer
+    |--------------------------------------------------------------------------
+    */
+   	'full_name'=>'Full Name',
+   	'phone'=>'Phone',
+   	'created_on'=>'Created on',
+   	'website'=>'Website',
+   	'company'=>'Company',
+   	'send_set_password_email'=>'Send set password email',
+   	'send_welcome_email'=>'Send welcome email',
+
+   	/*
+    |--------------------------------------------------------------------------
+        | Site Settings
+    |--------------------------------------------------------------------------
+    */
+   	'sales_with_flow'=>'Sales With Flow',
+   	'with_workflow'=>'With Workflow',
+   	'without_workflow'=>'Without Workflow',
+   	'purchase_with_flow'=>'Purchase With Flow',
+   	'not_selected'=>'Not Selected',
+
+    /*
+    |--------------------------------------------------------------------------
+        | Setup
+    |--------------------------------------------------------------------------
+    */
+    'tax'=>'Tax',
+    'rate'=>'Rate',
+    'unit'=>'Unit',
+    'code'=>'Code',
+    'symbol'=>'Symbol',
+    'note'=>'Note',
+    'payment_method'=>'Payment Method',
+    'description'=>'Description',
+    'long_description'=>'Long Description',
+    'pump'=>'Pump',
+    'longitude'=>'Longitude',
+    'latitude'=>'Latitude',
+    'location'=>'Location',
+
+    /*
+    |--------------------------------------------------------------------------
+        | Product
+    |--------------------------------------------------------------------------
+    */
+    'product'=>'Product',
+    'vat'=>'vat',
+    'min_qty'=>'Min Qty',
+    'mix_code'=>'Mix Code',
+    'OPC_rate'=>'OPC Rate',
+    'SRC_rate'=>'SRC Rate',
+    'cement'=>'Cement',
+    'water'=>'Water',
+    'agg_3/4'=>'Agg 3/4',
+    'agg_3/8'=>'Agg 3/8',
+    'sand'=>'Sand',
+    'rp_wp'=>'RP/WP',
+    'sp'=>'SP',
+
+    /*
+    |--------------------------------------------------------------------------
+        | Leads
+    |--------------------------------------------------------------------------
+    */
+    'lead'=>'lead',
+    'owner'=>'owner',
+    'no_record_found'=>'No Records Found',
+    'source'=>'Source',
+    'user_responsible'=>'User Responsible',
+    'information'=>'Information',
+    'additional'=>'Additional',
+    'position'=>'Position',
+    'contacted'=>'Contacted',
+    'today'=>'Today',
+    'recently_viewed'=>'Recently Viewed',
+    'items_following'=>'Items I\'m following',
+    'closed'=>'Closed',
+    'open'=>'Open',
+    'converted'=>'Converted',
+    'my_open'=>'My Open',
+    'todays'=>'Todays',
+    'lead_owner'=>'Lead Owner',
+    'organization'=>'Organization',
+    'link_email_address'=>'Link email address',
+    'lead_created_at'=>'Lead created at',
+    'email_id'=>'Email id',
+    'opted_on'=>'Opted on',
+    'lead_source'=>'Lead source',
+    'not_contacted'=>'Not contacted',
+    'attempted'=>'Attempted',
+    'contact'=>'Contact',
+    'convert'=>'Convert',
+    'convert_to_proposal'=>'Convert to proposal',
+    'user'=>'User',
+    'details'=>'Details',
+    'no_selected'=>'No Selected',
+    'fixed'=>'Fixed',
+    'and'=>'and',
+
+    /*
+    |--------------------------------------------------------------------------
+        | sales
+    |--------------------------------------------------------------------------
+    */
+    'select_item'=>'Select item',
+    'date_created'=>'Date created',
+    'estimate'=>'Estimate',
+    'from'=>'From',
+    'subject'=>'Subject',
+    'medium'=>'Medium',
+    'related'=>'Related',
+    'assigned'=>'Assigned',
+    'date'=>'Date',
+    'open_till'=>'Open Till',
+    'to'=>'To',
+    'add'=>'Add',
+    'item'=>'Item',
+    'qty'=>'Qty',
+    'OPC_1'=>'OPC (Type I)',
+    'SRC_1'=>'SRC (Type V)',
+    'sub_total'=>'Sub Total ',
+    'discount'=>'Discount',
+    'total'=>'Total',
+    'enter'=>'Enter',
+    'requirement'=>'Requirement',
+    'pending'=>'Pending',
+    'in_progress'=>'In-Progress',
+    'testings'=>'Testing',
+    're_Build'=>'Re-Build',
+    're_testing'=>'Re-Testing',
+    'granted'=>'Granted',
+    'saleman'=>'saleman',
+    'site'=>'site',
+
+    /*
+    |--------------------------------------------------------------------------
+        | Prpposals
+    |--------------------------------------------------------------------------
+    */
+     'proposal '=>'Proposal',
+     'amount'=>'amount',
+     'expiry'=>'expiry',
+     'reference'=>'Reference',
+     'sales_agent'=>'Sales Agent',
+     'admin_note'=>'Admin Note',
+     'bill_to'=>'Bill To',
+     'ship_to'=>'Ship to',
+     'time'=>'Time',
+     'client_note'=>'Client Note',
+     'terms_&_conditions'=>'Terms & Conditions',
+     'begin_typing'=>'Begin Typing',
+     'delivery'=>'Delivery',
+     'mix'=>'Mix',
+     'cubic_meter'=>'C.M.(m³)',
+     'structure'=>'Structure',
+     'remark'=>'Remark',
+     'contract'=>'Contract',
+     'draft'=>'draft',
+     'open'=>'open',
+     'sent'=>'sent',
+     'accepted'=>'accepted',
+     'declined'=>'declined',
+     'update'=>'Update',
+     'summary'=>'Summary',
+     'accept'=>'accept',
+     'reject'=>'reject',
+     'convert_to_order'=>'Convert to order',
+     'view_pdf'=>'View PDF',
+     'view_pdf_in_new_tab'=>'View PDF in New Tab',
+     'download'=>'Download',
+     'shipping'=>'Shipping',
+     'show_shipping'=>'Show shipping details in estimate',
+     'apply'=>'Apply',
+     'remarks'=>'Remarks',
+     'allowd_payment_mode'=>'Allowed payment modes for this invoice',
+     'admin_note'=>'Admin Note',
+     'payment_mode'=>'Payment Mode',
+     'type'=>'Type',
+     'record_payment_for'=>'Record Payment for',
+     'amount_received'=>'Amount Received',
+     'leave_a_note'=>'Leave a note',
+     'payment_date'=>'Payment Date',
+     'net_amount'=>'Net Total',
+
+     /*
+    |--------------------------------------------------------------------------
+        | payments
+    |--------------------------------------------------------------------------
+    */
+    'invoice_number'=>'Invoice Number',
+    'invoice_date'  =>'Invoice Date',
+    'invoice_amount'=>'Invoice Amount',
+    'payment_amount'=>'Payment Amount',
+
+     /*
+    |--------------------------------------------------------------------------
+        | account
+    |--------------------------------------------------------------------------
+    */
+    'unsigned'=>'Unsigned',
+    'signed'  =>'Signed',
+    'account'=>'Account',
+    'title'=>'Title',
+    'expected'=>'Expected',
+    'baladiya_permission'=>'Baladiya Permission',
+    'owner_id'=>'Owner ID',
+    'quotation'=>'Quotation',
+    'contract'=>'Contract',
+    'credit_form'=>'Credit Form',
+    'purchase_order'=>'Purchase Order',
+    'pay_grnt'=>'Payment Guarantee',
+    'document'=>'Document',
+
+    /*
+    |--------------------------------------------------------------------------
+        | account statement
+    |--------------------------------------------------------------------------
+    */
+    'load_no'=>'Load No',
+    'delivery'=>'Delivery',
+    'loaded_cbm'=>'Loaded CBM',
+    'mix_Code'=>'Mix Code',
+    'mix_type'=>'Mix Type',
+    'truck'=>'Truck',
+    'total_price'=>'Total Price',
+    'driver'=>'Driver',
+    'no_delivery_assigned_yet'=>'No Delivery assigned yet',
+
+      /*
+    |--------------------------------------------------------------------------
+        | delivery
+    |--------------------------------------------------------------------------
+    */
+    'customer_rejected'=>'Customer Rejected',
+    'internal_rejected'=>'Internal Rejected',
+    'loaded_cbm'=>'Loaded CBM',
+    'rejected'=>'Rejected',
+    'by'=>'By',
+    'total_cbm'=>'Total CBM',
+    'delivery_no'=>'Delivery No',
+    'rsn'=>'R.S.N.',
+    'customer_no'=>'Customer No',
+    'distance_km'=>'Distance (KM)',
+    'receiver'=>'Receiver',
+    'deliver_to'=>'Deliver To',
+    'del_address'=>'Deliver Address',
+    'class_mix_psi'=>'CLASS/MIX PSI',
+    'cement_kg_cbm'=>'CEMENT KG/CBM',
+    'slumo_cp'=>'SLUMP CP',
+    'design_mix'=>'DESIGN MIX',
+    'pump_mix'=>'PUMP MIX',
+    'additive'=>'ADDITIVE TYPE/LTR',
+    'total_order_cbm'=>'TOTAL ORDER CBM',
+    'preogressive_cbm'=>'PROGRESSIVE CBM',
+    'loaded_quant'=>'LOADED CBM',
+    'load_num'=>'LOADED NO',
+    'truck_no'=>'TRUCK NO',
+
+     /*
+    |--------------------------------------------------------------------------
+        | Bookings
+    |--------------------------------------------------------------------------
+    */
+    'contract'=>'Contract',
+    'actual'=>'Actual',
+    'contact_no'=>'Contact No',
+    'advance_payment'=>'Advance Payment',
+    'balance_amount'=>'Balance Amount',
+    'm³'=>'M³',
+    'first'=>'First',
+    'salesman'=>'Salesman',
+    'transaction_id'=>'Transaction id',
+
+     /*
+    |--------------------------------------------------------------------------
+        | Bookings
+    |--------------------------------------------------------------------------
+    */
+    'show'=>'Show',
+    'all'=>'All',
+    'order'=>'Order',
+    'order'=>'Order',
+    'c_code'=>'C.Code',
+    'code'=>'Code',
+    'remaining'=>'Remaining',
+    'delivered'=>'Delivered',
+    'internal_rejected'=>'Internal Rejected',
+
+      /*
+    |--------------------------------------------------------------------------
+        | Dispatch
+    |--------------------------------------------------------------------------
+    */
+    'no_of_days_owed'=>'Number of days owed',
+    'delivery_date'=>'Date',
+    'delivery_time'=>'Time',
+     /*
+    |--------------------------------------------------------------------------
+        | Driver
+    |--------------------------------------------------------------------------
+    */
+    'driver'=>'Driver',
+    'driving_licence'=>'Driving licence',
+    /*
+    |--------------------------------------------------------------------------
+        | vehicle
+    |--------------------------------------------------------------------------
+    */
+     'plate_no'=>'Plate No',
+     'plate_letter'=>'Plate Letter',
+     'assign_driver'=>'Assign Driver',
+     'registration'=>'Registration',
+     'make'=>'Make',
+     'model'=>'Model',
+     'year'=>'Year',
+     'chasis_no'=>'Chasis No',
+     'registration_no'=>'Registration No',
+     'vin_no'=>'VIN No',
+     'comission'=>'Comission',
+     'payment_type'=>'Payment type',
+     'booking_amount'=>'Booking Amount',
+
+     /*
+    |--------------------------------------------------------------------------
+        | Commodity 
+    |--------------------------------------------------------------------------
+    */
+   	'commodity'=>'Commodity',
+   	'sku'=>'Sku',
+   	'images'=>'Images',
+   	'group'=>'Group',
+   	'number'=>'number',
+   	'general_info'=>'General Info',
+   	'requester'=>'Requester',
+   	'req_date'=>'Req date',
+   	'after'=>'After',
+   	'sar'=>'SAR',
+    'commodity_barcode'=>'Commodity barcodebarcode',
+    'commodity_code'=>'Commodity Code',
+    'commodity_name'=>'Commodity Name',
+    'commodity_group'=>'Commodity group',
+    'group_name'=>'Group Name',
+    'unit_name'=>'Unit Name',
+    'taxes'=>'Taxes',
+    'price'=>'Price',
+    'unit_price'=>'Unit Price',
+    'image'=>'Image',
+    'sku_code'=>'Sku code',
+    'sku_name'=>'Sku Name',
+    'vat_number'=>'Vat Number',
+    'role_position'=>'Role Position',
+
+
+     /*
+    |--------------------------------------------------------------------------
+        | purchase 
+    |--------------------------------------------------------------------------
+    */
+    'purchase'=>'Purchase',
+    'requested'=>'Requested',
+    'approve'=>'Approve',
+    'reject'=>'Reject',
+    'not_yet'=>'Not yet',
+    'other_info'=>'Other Info',
+    'req'=>'Req',
+    'payment'=>'Payment',
+
+
+     /*
+    |--------------------------------------------------------------------------
+        | vehicle mainintains 
+    |--------------------------------------------------------------------------
+    */
+    'parts'=>'Parts',
+    'part'=>'Part',
+    'order_amount'=>'Order Amount',
+    'paid_amount'=>'Paid Amount',
+    'remaining_amt'=>'Remaining Amount',
+    'manufacturer'=>'Manufacturer',
+    'purchase_parts'=>'Purchase Parts',
+    'warranty'=>'Warranty',
+    'for_exisiting_parts'=>'For Existing Parts',
+    'condition'=>'condition',
+    'old'=>'old',
+    'per_pcs'=>'Per pcs',
+    'buy'=>'Buy',
+    'parts_fits_with'=>'Parts fit with',
+    'total_amount'=>'Total Amount',
+    'given_amount'=>'Given Amount',
+    'pending_amount'=>'Pending Amount',
+    'purchase_part'=>'Purchase Part',
+    'generate_lable'=>'Add parts to generate Labels',
+    'no_of_lables'=>'No Of Lables',
+    'info_to_show_on_lable'=>'Information to show in Labels',
+    'part_name'=>'Part Name',
+    'part_no'=>'Part No',
+    'part_price'=>'Part Price',
+    'barcode'=>'Barcode',
+    'preview'=>'Preview',
+
+    //added by amol
+    'select_and_begin_typing' => 'Select and begin typing',
+    'delivery_time'           => 'Delivery Time',
+    'select_default'          => '-- Select --',
+    'select_mix'              => 'Select Mix',
+    'fixed_amount'            => 'Fixed Amount',
+    'cust'                    => 'Cust',
+    'cont'                    => 'Cont',
+    'view_details'            => 'View Details',
+    'edit_order'              => 'Edit Order',
+    'cant_add_more'           => 'Cannot add more than 1 Mix!',
+    'pump_wise_qty'           => 'Pump wise Mix quantity ( in m³ )',
+    'search_for_an_item'      => 'Search for an Item',
+    'ord'                     => 'ORD',
+    'rem'                     => 'REM',
+    'dlv'                     => 'DLV',
+    'cust_rej'                => 'Cust.REJ',
+    'int'                     => 'Int',
+    'del'                     => 'DEL',
+    'rej'                     => 'Rej',
+    'delivery_note'           => 'Delivery Note',
+    'edit_qty'                => 'Edit Qty',
+    'rej_by'                  => 'REJ By',
+    'del_date'                => 'DEL Date',
+    'reject_qty'              => 'Reject QTY',
+    'download_delivery_note'  => 'Download Delivery Note',
+    'readymix'                => 'Readymix',
+    'close'                   => 'Close',
+    'edit_quantity'           => 'Edit Quantity',
+    'quantity'                => 'Quantity',
+    'reject_quantity'         => 'Reject Quantity',
+    'rejected_by'             => 'Rejected By',
+    'internal_reason'         => 'Internal Reason',
+    'customer_end'            => 'Customer End',
+    'rejection_details'       => 'Rejection Details',
+    'rejected_reason'         => 'Rejected Reason',
+    'rejected'                => 'Rejected',
+    'purchase_parts'          => 'Purchase parts',
+    'shift_schedule'          => 'Shift schedule',
+
+    /*
+    |--------------------------------------------------------------------------
+        | Attendance 
+    |--------------------------------------------------------------------------
+    */
+    'shift_margin'=>'Shift Margin',
+    'enable'=>'Enable',
+    'disable'=>'Disable',
+    'hours_before_the_shift_starts'=>'hours before the shift starts',
+    'hours_after_the_shift_ends'=>'hours after the shift ends',
+    'attendance_time_note'=>'Check-in/check-out entries only within',
+    'attendance_time_note1'=>'will be considered as payable hours',
+    'calendar'=>'Calendar',
+    'shift_name'=>'Shift Name',
+    'applicable'=>'Applicable For',
+    'pay_time'=>'Pay Time',
+    'mode'=>'Mode',
+    'pay_type'=>'Pay type',
+    'atomatic'=>'Atomatic',
+    'manual'=>'Manual',
+    'paid'=>'Paid',
+    'unpaid'=>'Unpaid',
+    'start_time'=>'Start time',
+    'end_time'=>'End time',
+
+     /*
+    |--------------------------------------------------------------------------
+        | Leave Tracker 
+    |--------------------------------------------------------------------------
+    */
+    'restricted_holidays'=>'Restricted Holidays',
+    'on_duty'=>'On Duty',
+    'entitlement'=>'Entitlement',
+    'applicable'=>'Applicable',
+    'restrictions'=>'Restrictions',
+    'validity'=>'Validity',
+    'days'=>'Days',
+    'effective_after'=>'Effective After',
+    'date_of_joining'=>'Date of Joining',
+    'date_of_confirmation'=>'Date of Confirmation',
+    'on_time'=>'On Time',
+    'yearly'=>'Yearly',
+    'monthly'=>'monthly',
+    'half_yearly'=>'Half yearly',
+    'triannually'=>'Triannually',
+    'quarterly'=>'Quarterly',
+    'bi_monthly'=>'Bi Monthly',
+    'semi_monthly'=>'Semi Monthly',
+    'bi_weekly'=>'Bi Weekly',
+    'weekly'=>'weekly',
+    'on'=>'On',
+    'last_day'=>'Last Day',
+    'policy_date'=>'Policy Date',
+    'joining_date'=>'Joining Date',
+    'birth_date'=>'Birth Date',
+    'no_of_days'=>'No Of days',
+    'current_accrual'=>'Current Accrual',
+    'next_accrual'=>'Next Accrual',
+    'reset'=>'Reset',
+    'carry_forward'=>'Carry Forward',
+    'carry_forward_with_expiry'=>'Carry Forward With Expiry',
+    'Carry_forward_with_overall_limit'=>'Carry Forward With Overall Limit',
+    'percentage'=>'Percentage',
+    'max_limit'=>'Max Limit',
+    'encashment'=>'Encashment',
+    'max_limit'=>'Max Limit',
+    'hours'=>'Hours',
+    'leave'=>'leave',
+    'in'=>'In',
+    'exceptions'=>'Exceptions',
+    'single'=>'Single',
+    'married'=>'Married',
+    'designations'=>'Designations',
+    'or'=>'or',
+    'weekends_btween_leave_period'=>'Weekends Between Leave Period',
+    'count_as_leave'=>'Count as leave',
+    'count_after'=>'Count After',
+    'dont_count_as_leave'=>'Don\'t count as leave',
+    'while_applying_leave_exceed_leave'=>'While Applying Leave, Exceed Leave Balance',
+    'without_limit'=>'without limit',
+    'until_year_end_limit'=>'Until year end limit',
+    'without_limit_and_mark_ad_lop'=>'Without limit and mark as LOP',
+    'duration_allowed'=>'Duration Allowed',
+    'full_day'=>'Full Day',
+    'half_day'=>'Half Day',
+    'quarter_day'=>'Quarter Day',
+    'hourly'=>'Hourly',
+    'roles'=>'Roles',
+    'leave_period'=>'Leave Period',
+    'days_hours_taken'=>'Days Hours Taken',
+    'date_of_request'=>'Date of request',
+    'reason_for_leave'=>'Reason for leave',
+    'total_hours'=>'Total hours',
+    'days_hours_taken'=>'Days hours taken',
+    'weekoff'=>'Week off',
+    'report_configuration'=>'Report Configuration',
+    'all_user_to_view'=>'Allow users to view',
+    'leave_taken_alone'=>'Leave Taken Alone',
+    'simple_leave_summary'=>'Simple Leave Summary',
+    'complete_leave_summary'=>'Complete Leave Summary',
+    'balance_to_be_displayed'=>'Balance to be displayed',
+    'start_date_of_leave_request '=>'Start date of leave request',
+    'accrual_period_balance '=>'Accrual Period Balance',
+    'current_date'=>'Current Date',
+    'while_applying_leave_exceed_leave_balance'=>'While Applying Leave, Exceed Leave Balance',
+    'past_dates'=>'Past Dates',
+    'future_dates'=>'Future Dates',
+    'to_be_applied'=>'To be applied',
+    'days_in_advance'=>'Days In Advance',
+    'min_leave_enable'=>'Minimum leave that can be availed per application',
+    'max_leave_enable'=>'Maximum leave that can be availed per application',
+    'max_consecutive_enable'=>'Maximum number of consecutive days of Leave allowed',
+    'min_gap_enable'=>'Minimum gap (in days) between two applications',
+    'show_fileupload_after_enable'=>'Enable file upload option if the applied leave period exceeds',
+    'max_appl_specific_period'=>'Maximum number of applications allowed within the specified period',
+    'leave_rest'=>'This leave can be applied only on',
+    'leave_rest_together'=>'This leave cannot be taken together with ',
+    'week'=>'Week',
+    'month'=>'Month',
+    'accrual_period'=>'Accrual Period',
+    'job_tenure'=>'Job Tenure',
+
+];
+
